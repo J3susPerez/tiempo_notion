@@ -1,0 +1,19 @@
+<html>
+<body>
+<h1>Simple Timer</h1>
+<p id="demo"></p>
+
+<script>
+var timeLeft = 10;
+var timer = setInterval(function(){
+  document.getElementById("demo").innerHTML = timeLeft + " seconds remaining";
+  timeLeft -= 1;
+  if(timeLeft <= 0){
+    clearInterval(timer);
+    document.getElementById("demo").innerHTML = "Time's up!";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
